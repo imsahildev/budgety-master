@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <svg
+      aria-hidden="true"
+      style="position: absolute; width: 0; height: 0; overflow: hidden;"
+      version="1.1"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+    >
+      <defs>
+        <defs>
+          <symbol id="icon-check" viewBox="0 0 20 20">
+          <path d="M8.294 16.998c-0.435 0-0.847-0.203-1.111-0.553l-3.573-4.721c-0.465-0.613-0.344-1.486 0.27-1.951 0.615-0.467 1.488-0.344 1.953 0.27l2.351 3.104 5.911-9.492c0.407-0.652 1.267-0.852 1.921-0.445s0.854 1.266 0.446 1.92l-6.984 11.21c-0.242 0.391-0.661 0.635-1.12 0.656-0.022 0.002-0.042 0.002-0.064 0.002z"></path>
+          </symbol>
+        <symbol id="icon-cross" viewBox="0 0 20 20">
+          <title>cross</title>
+          <path
+            d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"
+          ></path>
+        </symbol>
+        <symbol id="icon-droplet" viewBox="0 0 20 20">
+          <path d="M16.887 9.241c-1.284-3.583-4.006-6.8-6.887-9.241-2.881 2.442-5.603 5.659-6.887 9.241-0.794 2.216-0.873 4.62 0.246 6.746 1.286 2.444 3.88 4.012 6.641 4.012s5.355-1.568 6.641-4.012c1.119-2.126 1.040-4.531 0.246-6.746zM14.429 14.823c-0.856 1.626-2.594 2.677-4.429 2.677-1.077 0-2.12-0.362-2.971-0.989 0.259 0.034 0.52 0.052 0.783 0.052 2.293 0 4.466-1.313 5.535-3.345 0.877-1.666 0.8-3.395 0.466-4.772 0.284 0.55 0.526 1.098 0.72 1.639 0.442 1.232 0.782 3.054-0.105 4.738z"></path>
+          </symbol>
+        <symbol id="icon-box-add" viewBox="0 0 32 32">
+          <title>box-add</title>
+          <path
+            d="M26 2h-20l-6 6v21c0 0.552 0.448 1 1 1h30c0.552 0 1-0.448 1-1v-21l-6-6zM16 26l-10-8h6v-6h8v6h6l-10 8zM4.828 6l2-2h18.343l2 2h-22.343z"
+          ></path>
+        </symbol>
+        <symbol id="icon-box-remove" viewBox="0 0 32 32">
+          <title>box-remove</title>
+          <path
+            d="M26 2h-20l-6 6v21c0 0.552 0.448 1 1 1h30c0.552 0 1-0.448 1-1v-21l-6-6zM20 20v6h-8v-6h-6l10-8 10 8h-6zM4.828 6l2-2h18.343l2 2h-22.343z"
+          ></path>
+        </symbol>
+      </defs>
+    </svg>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Budgety</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="main-panel">
+        <div class="summary">
+          <div class="summary__month">May 2020</div>
+          <div class="summary__budget">+ 200.00&#8377;</div>
+          <div class="summary__label">Available budget</div>
+        </div>
+
+        <div class="secondary-panel">
+          <div class="income">
+            <div class="income__label">
+              Income<svg class="icon income__icon">
+                <use xlink:href="#icon-box-remove"></use>
+              </svg>
+            </div>
+            <div class="income__value">+ 1,250.00</div>
+            <div>&nbsp;</div>
+          </div>
+
+          <div class="input__type">
+            <label class="tgl">
+              <input type="checkbox" id="checkbox" />
+              <span data-on="Income" data-off="Expense"></span>
+            </label>
+          </div>
+
+          <div class="expenses">
+            <div class="expenses__label">
+              Expenses<svg class="icon expenses__icon">
+                <use xlink:href="#icon-box-add"></use>
+              </svg>
+            </div>
+            <div class="expenses__value">- 1,050.00</div>
+            <div class="expenses__percentage">84%</div>
+          </div>
+        </div>
+
+        <div class="input">
+          <div class="input__description">
+            <input
+              type="text"
+              class="add__description form__input"
+              id="description"
+              placeholder="Add description"
+            />
+            <label for="description" class="form__label">Add description</label>
+          </div>
+
+          <div class="input__value">
+            <input
+              type="number"
+              id="value"
+              class="add__value form__input"
+              placeholder="Value"
+            />
+            <label for="value" class="form__label">Value</label>
+          </div>
+
+          <button class="input__btn">
+            <svg class="input__icon btn">
+              <use xlink:href="#icon-check"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="panel">
+        <!-- <div class="panel__item panel__item-income" id="income-0">
+          <div class="panel__item__details">
+            <div class="panel__item__details-name">Salary</div>
+          </div>
+          <div class="panel__item__value">
+            <div class="panel__item__value-number">+ 1,200.00</div>
+          </div>
+          <button class="item__delete--btn">
+            <svg class="icon icon-cross">
+              <use xlink:href="#icon-cross"></use>
+            </svg>
+          </button>
+        </div>
+
+        <div class="panel__item panel__item-expense" id="expense-0">
+          <div class="panel__item__details">
+            <div class="panel__item__details-name">Holiday</div>
+          </div>
+          <div class="panel__item__value">
+            <div class="panel__item__value-number">- 1,000.00</div>
+            <div class="panel__item__value-percentage">83%</div>
+          </div>
+          <button class="item__delete--btn">
+            <svg class="icon icon-cross">
+              <use xlink:href="#icon-cross"></use>
+            </svg>
+          </button>
+        </div> -->
+      </div>
+
+      <div class="owner">
+        <img src="./img/me.jpg" alt="Sahil" id="sahil">
+        <div class="infos">
+          <div class="top">
+            <p id="light">Follow me:</p>
+            <img src="./img/insta.png" alt="instagram" id="insta">
+          </div>
+
+          <a href="https://www.instagram.com/the_awakening_msaha/" target="blank" class='target'>
+            the_awakening_msaha
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="dark-toggle">
+      <svg class="icon icon-droplet">
+        <use xlink:href="#icon-droplet"></use>
+      </svg>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
